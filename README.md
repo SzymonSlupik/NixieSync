@@ -18,6 +18,8 @@ Some additional design details:
 - I decided to use the [Seeed Studio XIAO C3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) module. Very compact form factor, external WiFi antenna (the clock has thick metal enclosure), support for Arduino IDE with very simple USB-C power/programming/debug connector.
 - Setup is by starting a WiFi AP on the XIAO and having all parameters on the captive portal page. This technique buys a very good UX, as basically you connect to the WiFi network and the setup page pops up automatically.
 - Initially I wanted to interface to the clock via small relays (the safest option), but after some examinations of the circuit I ended up with simple MOSFET transistors.
+- Claude spotted the MC33064 reset supervisor chip on one of the photos and suggested interfacing with it: sending the reset pulse and also receiving detecting a brownout condition when the clock was reset and the XIAO module would not necessarily detect this.
+- Daylight Saving Time (DST) is also handled by advancing hours by +1 or +23 twice a year.
 
 The whole project was done with Claude AI. Besides the above design requirements I did not do much else. In particular I have NOT seen / touched the code. We (Claude and I) went through a couple of iterations that included adding support for WPA2-Enterprise (PEAP / MSCHAPv2) and improving debouncing of the reset switch. The code is 100% written by Claude.
 

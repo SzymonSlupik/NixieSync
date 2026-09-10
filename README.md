@@ -1,3 +1,5 @@
+![Screenshot of the Karsson Nixie clock](karlsson-clock.jpg)
+
 The Karlsson Nixie clock (by Peter van der Jagt 1997) is very stylish. One of the first of the kind and definitely setting the trend. Unfortunately it does not hold the time after a power outage. For quite some time I was thinking of adding a time synchronization module.
 
 Initially the idea was to use the long wave radio receiving the [DCF77](https://en.wikipedia.org/wiki/DCF77) signal. DCF77 is increasingly more problematic as the 77kHz frequency is impacted by the totality of high frequency digital power supplies that generate lots of radio noise.

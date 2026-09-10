@@ -18,6 +18,6 @@ Some additional design details:
 The whole project was done with Claude AI. Besides the above design requirements I did not do much else. In particular I have NOT seen / touched the code. We (Claude and I) went through a couple of iterations that included adding support for WPA2-Enterprise (PEAP / MSCHAPv2) and improving debouncing of the reset switch. The code is 100% written by Claude.
 
 For details see: 
-- [The Arduino source code](NixieSync.INO)
-- [The Claude design blueprint](NixieSync.MD)
-- [The PDF PCB layout](NixieSync-Layout.PDF)
+- [The Arduino source code](NixieSync.ino)
+- [The Claude design blueprint](NixieSync.md)
+- [The PDF PCB layout](NixieSync-Layout.pdf)

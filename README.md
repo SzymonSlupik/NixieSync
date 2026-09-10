@@ -23,6 +23,16 @@ Some additional design details:
 
 The whole project was done with Claude AI. Besides the above design requirements I did not do much else. In particular I have NOT seen / touched the code. We (Claude and I) went through a couple of iterations that included adding support for WPA2-Enterprise (PEAP / MSCHAPv2) and improving debouncing of the reset switch. The code is 100% written by Claude.
 
+About 1000 lines in total with the key blocks:
+- Setting up a WiFi AP with a captive portal page
+- Switching WiFi from AP to Client mode and associating with the infrastructure AP, including WPA2-Enterprise
+- Getting and IP address via DHCP
+- Getting the time via NTP
+- Calculating the exact time required to "pulse" the clock
+- Pulsing the clock MCU inputs to advance the required number of hours / minutes
+- Hosting the html status page
+- Watching for DST changes and potential resets
+
 For details see: 
 - [The Arduino source code](NixieSync.ino)
 - [The Claude design blueprint](NixieSync.md)

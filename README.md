@@ -6,7 +6,7 @@ See more at [Onno's Elecronics](https://www.glowbug.nl/neon/KarlssonClock.html).
 
 Initially the idea was to use the long wave radio receiving the [DCF77](https://en.wikipedia.org/wiki/DCF77) signal. DCF77 is increasingly more problematic as the 77kHz frequency is impacted by the totality of high frequency digital power supplies that generate lots of radio noise.
 
-The alternative is of course fully digital, relying on an Internet time source, based on the NTP protocol. Surprisingly (or not) the NTP-based module has proven to be super easy to build these days (with the help of AI).
+The alternative is of course fully digital, relying on an Internet time source, based on the NTP protocol. Surprisingly (or not) the NTP-based module has proven to be super easy to build these days (...with the help of AI).
 
 The basic idea is this:
 - At power cycle / reboot the clock starts with 00:00:00

@@ -37,3 +37,5 @@ For details see:
 - [The Arduino source code](NixieSync.ino)
 - [The Claude design blueprint](NixieSync.md)
 - [The PDF PCB layout](NixieSyncLayout.pdf)
+
+![NixieSync module circuit diagram](NixieSyncCircuit.jpg)

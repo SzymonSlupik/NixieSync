@@ -20,4 +20,4 @@ The whole project was done with Claude AI. Besides the above design requirements
 For details see: 
 - [The Arduino source code](NixieSync.ino)
 - [The Claude design blueprint](NixieSync.md)
-- [The PDF PCB layout](NixieSync-Layout.pdf)
+- [The PDF PCB layout](NixieSyncLayout.pdf)

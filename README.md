@@ -23,6 +23,21 @@ Some additional design details:
 
 The whole project was done with Claude AI. Besides the above design requirements I did not do much else. In particular I have NOT seen / touched the code. We (Claude and I) went through a couple of iterations that included adding support for WPA2-Enterprise (PEAP / MSCHAPv2) and improving debouncing of the reset switch. The code is 100% written by Claude.
 
+The initial prompt (note that initially I was lazy and did not want to bother examining how the switches are connected, so planned to use neutral relays that have been later replaced by MOSFETs):
+>I have a fairly vintage clock based on nixie tubes. The clock loses time every time the power goes off. I'm thinking of adding a small microcontroller with WiFi (such as the Seeed Studio XIAO).  
+>Upon power-up the XIAO would connect to WiFi, obtain current time via NTP, and adjust the clock.  
+>Clock adjustments would be done via two relays:  
+>- 1st relay on momentary close advances the hour by +1.  
+>- 2nd relay on momentary close advances the minute by +1
+>  
+>So the XIAO would need to generate a sequence of pulses for the 1st relay followed by a sequence of pulses for the 2nd relay.  
+>Settings would be done via a captive portal page - XIAO first setting up its own WiFi AP, upon connecting the phone goes to the "captive portal" page to configure:  
+>- WiFi network to use (network scan, selection, password)  
+>- NTP server to use (with a good default proposed)
+>
+>There would also be a 3rd relay controlled by XIAO to reset the clock (by cutting power to the clock board).  
+>Design a schematic for the module and Arduino project / code implementing the above functionality. If in doubt, ask me a question.  
+
 About 1000 lines in total with the key blocks:
 - Setting up a WiFi AP with a captive portal page
 - Switching WiFi from AP to Client mode and associating with the infrastructure AP, including WPA2-Enterprise

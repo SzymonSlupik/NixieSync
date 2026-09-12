@@ -54,3 +54,5 @@ For details see:
 - [The PDF PCB layout](NixieSyncLayout.pdf)
 
 ![NixieSync module circuit diagram](NixieSyncCircuit.jpg)
+
+![NixieSync clock in action](NixieSyncInAction.gif)
